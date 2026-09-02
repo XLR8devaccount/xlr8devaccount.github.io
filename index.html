@@ -43,13 +43,14 @@
     <!-- Header / Navbar (Apple Glassmorphism - Enlarged for Logo) -->
     <header class="sticky top-0 z-50 bg-[#fbfbfd]/80 backdrop-blur-md border-b border-[#d2d2d7]/40 w-full">
         <div class="max-w-5xl mx-auto px-6 h-20 flex items-center justify-between text-sm font-medium text-[#1d1d1f]">
-            <div class="flex items-center gap-3">
+            <div class="flex items-center gap-3 cursor-pointer" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
                 <img src="unnamed.png" alt="Interval Timer Logo" class="w-10 h-10 object-contain" onerror="this.src='https://images.unsplash.com/photo-1518611012118-696072aa579a?w=100&auto=format&fit=crop&q=60'">
                 <span class="font-bold text-lg tracking-tight text-[#1d1d1f]">Interval Timer</span>
             </div>
             <nav class="hidden md:flex items-center gap-8 text-[#515154]">
                 <a href="#features" class="hover:text-[#1d1d1f] transition">Overview</a>
                 <a href="#workouts" class="hover:text-[#1d1d1f] transition">Workouts</a>
+                <button onclick="openPrivacyModal()" class="hover:text-[#1d1d1f] transition text-left">Privacy Policy</button>
             </nav>
             <a href="https://play.google.com/store/apps/details?id=com.aistudio.beeptesttrainer.v2" target="_blank" rel="noopener noreferrer" class="bg-[#0071e3] hover:bg-[#0077ed] text-white font-medium px-4 py-2 rounded-full text-xs transition shadow-sm">
                 Get App
@@ -73,8 +74,8 @@
             </p>
             <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
                 <!-- Google Play Badge Button -->
-                <a href="https://play.google.com/store/apps/details?id=com.aistudio.beeptesttrainer.v2" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-3 bg-black hover:bg-slate-900 text-white px-6 py-3 rounded-xl transition shadow-lg shadow-black/10">
-                    <svg class="w-6 h-6" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                <a href="https://play.google.com/store/apps/details?id=com.aistudio.beeptesttrainer.v2" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-3 bg-black hover:bg-slate-900 text-white px-6 py-3.5 rounded-xl transition shadow-lg shadow-black/10">
+                    <svg class="w-6 h-6 shrink-0" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
                         <path fill="#ea4335" d="M30.73 24.63C25.43 30.13 22 39.83 22 53.03v405.94c0 13.2 3.43 22.9 8.73 28.4l2.25 2.15L248.86 269.9v-27.8L32.98 22.48z"/>
                         <path fill="#fbbc04" d="M315.15 336.17l-66.29-66.27V242.1l66.29-66.28 3.51 2.01 78.47 44.66c22.4 12.75 22.4 33.69 0 46.44l-78.47 44.67z"/>
                         <path fill="#4285f4" d="M318.66 334.16L248.86 264.36 32.98 489.52c7.5 7.93 19.5 8.92 33.15 1.15l252.53-143.66-30-12.85z"/>
@@ -269,7 +270,7 @@
                     <h3 class="font-semibold text-xl text-[#1d1d1f] mb-2">Start training today</h3>
                     <p class="text-[#515154] text-xs mb-8">Available now on Google Play.</p>
                     <a href="https://play.google.com/store/apps/details?id=com.aistudio.beeptesttrainer.v2" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-black hover:bg-slate-900 text-white font-medium px-5 py-2.5 rounded-xl text-xs transition shadow-md">
-                        <svg class="w-4 h-4" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                        <svg class="w-4 h-4 shrink-0" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
                             <path fill="#ea4335" d="M30.73 24.63C25.43 30.13 22 39.83 22 53.03v405.94c0 13.2 3.43 22.9 8.73 28.4l2.25 2.15L248.86 269.9v-27.8L32.98 22.48z"/>
                             <path fill="#fbbc04" d="M315.15 336.17l-66.29-66.27V242.1l66.29-66.28 3.51 2.01 78.47 44.66c22.4 12.75 22.4 33.69 0 46.44l-78.47 44.67z"/>
                             <path fill="#4285f4" d="M318.66 334.16L248.86 264.36 32.98 489.52c7.5 7.93 19.5 8.92 33.15 1.15l252.53-143.66-30-12.85z"/>
@@ -281,6 +282,69 @@
             </div>
         </div>
     </section>
+
+    <!-- Privacy Policy Modal -->
+    <div id="privacy-modal" class="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm hidden items-center justify-center p-4">
+        <div class="bg-white rounded-3xl max-w-2xl w-full max-h-[85vh] flex flex-col shadow-2xl overflow-hidden animate-in fade-in zoom-in duration-200">
+            <div class="px-6 py-4 border-b border-slate-200 flex items-center justify-between bg-[#fbfbfd]">
+                <h3 class="text-lg font-semibold text-[#1d1d1f]">Privacy Policy</h3>
+                <button onclick="closePrivacyModal()" class="w-8 h-8 rounded-full bg-slate-200/80 hover:bg-slate-300 flex items-center justify-center text-slate-700 transition" aria-label="Close modal">
+                    ✕
+                </button>
+            </div>
+            <div class="p-6 overflow-y-auto space-y-4 text-xs md:text-sm text-slate-600 leading-relaxed">
+                <p class="font-medium text-[#1d1d1f]">XLR8 built the Interval & Tabata Timer app as an Ad Supported app. This SERVICE is provided by Interval & Tabata Timer at no cost and is intended for use as is.</p>
+                <p>This page is used to inform visitors regarding my policies with the collection, use, and disclosure of Personal Information if anyone decided to use my Service.</p>
+                <p>If you choose to use my Service, then you agree to the collection and use of information in relation to this policy. The Personal Information that I collect is used for providing and improving the Service. I will not use or share your information with anyone except as described in this Privacy Policy.</p>
+                <p>The terms used in this Privacy Policy have the same meanings as in our Terms and Conditions, which is accessible at Interval & Tabata Timer unless otherwise defined in this Privacy Policy.</p>
+
+                <h4 class="font-bold text-[#1d1d1f] pt-2">Information Collection and Use</h4>
+                <p>For a better experience, while using our Service, I may require you to provide us with certain personally identifiable information, including but not limited to the Android Advertising ID, which is collected by third-party advertising services for the purpose of serving relevant ads. The information that I request will be retained on your device and is not collected or stored by me in any way.</p>
+                <p>The app does use third-party services that may collect information used to identify you.<br>Link to privacy policy of third-party service providers used by the app:</p>
+                <ul class="list-disc pl-5 space-y-1">
+                    <li><a href="https://policies.google.com/privacy" target="_blank" class="text-[#0071e3] underline">Google Play Services</a></li>
+                    <li><a href="https://support.google.com/admob/answer/6128543" target="_blank" class="text-[#0071e3] underline">AdMob</a></li>
+                </ul>
+
+                <h4 class="font-bold text-[#1d1d1f] pt-2">Log Data</h4>
+                <p>I want to inform you that whenever you use my Service, in a case of an error in the app, I do not personally collect Log Data. However, third-party services (such as Google Play Services) may automatically collect diagnostic information to help improve the stability and performance of the app.</p>
+
+                <h4 class="font-bold text-[#1d1d1f] pt-2">Cookies</h4>
+                <p>Cookies are files with a small amount of data that are commonly used as anonymous unique identifiers. This Service does not use these “cookies” explicitly. However, the app may use third-party code and libraries (like AdMob) that use “cookies” to collect information and improve their services. You have the option to either accept or refuse these cookies and know when a cookie is being sent to your device. If you choose to refuse our cookies, you may not be able to use some portions of this Service.</p>
+
+                <h4 class="font-bold text-[#1d1d1f] pt-2">Service Providers</h4>
+                <p>I may employ third-party companies and individuals due to the following reasons:</p>
+                <ul class="list-disc pl-5 space-y-1">
+                    <li>To facilitate our Service;</li>
+                    <li>To provide the Service on our behalf;</li>
+                    <li>To perform Service-related services; or</li>
+                    <li>To assist us in analyzing how our Service is used.</li>
+                </ul>
+                <p>I want to inform users of this Service that these third parties have access to your Personal Information to perform the tasks assigned to them on our behalf. However, they are obligated not to disclose or use the information for any other purpose.</p>
+
+                <h4 class="font-bold text-[#1d1d1f] pt-2">Security</h4>
+                <p>I value your trust in providing us your Personal Information, thus we are striving to use commercially acceptable means of protecting it. But remember that no method of transmission over the internet, or method of electronic storage is 100% secure and reliable, and I cannot guarantee its absolute security.</p>
+
+                <h4 class="font-bold text-[#1d1d1f] pt-2">Links to Other Sites</h4>
+                <p>This Service may contain links to other sites. If you click on a third-party link, you will be directed to that site. Note that these external sites are not operated by me. Therefore, I strongly advise you to review the Privacy Policy of these websites. I have no control over and assume no responsibility for the content, privacy policies, or practices of any third-party sites or services.</p>
+
+                <h4 class="font-bold text-[#1d1d1f] pt-2">Children’s Privacy</h4>
+                <p>These Services do not address anyone under the age of 13. I do not knowingly collect personally identifiable information from children under 13. In the case I discover that a child under 13 has provided me with personal information, I immediately delete this from our servers. If you are a parent or guardian and you are aware that your child has provided us with personal information, please contact me so that I will be able to do necessary actions.</p>
+
+                <h4 class="font-bold text-[#1d1d1f] pt-2">Request for Data Privacy Inquiries</h4>
+                <p>As this application does not utilize user account creation, I do not store personal user data on my servers. If you have questions regarding data collected by third-party services (such as AdMob or Firebase) or would like to submit a privacy-related inquiry, please use their form to contact them.</p>
+
+                <h4 class="font-bold text-[#1d1d1f] pt-2">Changes to This Privacy Policy</h4>
+                <p>I may update our Privacy Policy from time to time. Thus, you are advised to review this page periodically for any changes. I will notify you of any changes by posting the new Privacy Policy on this page. These changes are effective immediately after they are posted on this page.</p>
+
+                <h4 class="font-bold text-[#1d1d1f] pt-2">Contact Us</h4>
+                <p>If you have any questions or suggestions about my Privacy Policy, do not hesitate to contact me at support.</p>
+            </div>
+            <div class="px-6 py-3 border-t border-slate-200 bg-[#fbfbfd] text-right">
+                <button onclick="closePrivacyModal()" class="bg-[#0071e3] text-white text-xs font-medium px-5 py-2 rounded-xl transition hover:bg-[#0077ed]">Close</button>
+            </div>
+        </div>
+    </div>
 
     <!-- Sticky Mobile Download Bar -->
     <div class="fixed bottom-0 left-0 right-0 z-40 bg-white/90 backdrop-blur-md border-t border-slate-200/80 p-3 md:hidden flex items-center justify-between shadow-[0_-4px_20px_rgba(0,0,0,0.08)]">
@@ -298,10 +362,15 @@
 
     <!-- Footer -->
     <footer class="py-8 border-t border-[#d2d2d7]/40 text-center text-[#515154] text-xs bg-white w-full">
+        <div class="flex items-center justify-center gap-6 mb-3">
+            <a href="#features" class="hover:text-[#1d1d1f] transition">Overview</a>
+            <a href="#workouts" class="hover:text-[#1d1d1f] transition">Workouts</a>
+            <button onclick="openPrivacyModal()" class="hover:text-[#1d1d1f] transition">Privacy Policy</button>
+        </div>
         <p>&copy; 2026 Interval Timer. All rights reserved.</p>
     </footer>
 
-    <!-- Carousel Script -->
+    <!-- Carousel & Modal Script -->
     <script>
         const cards = document.querySelectorAll('.carousel-card');
         const container = document.getElementById('scroll-container');
@@ -405,6 +474,29 @@
 
         // Initial setup
         updateCardLayout(0);
+
+        // Privacy Modal Functions
+        function openPrivacyModal() {
+            const modal = document.getElementById('privacy-modal');
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closePrivacyModal() {
+            const modal = document.getElementById('privacy-modal');
+            modal.classList.remove('flex');
+            modal.classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Close modal on outside click
+        window.onclick = function(event) {
+            const modal = document.getElementById('privacy-modal');
+            if (event.target === modal) {
+                closePrivacyModal();
+            }
+        }
     </script>
 </body>
 </html>
