@@ -24,27 +24,34 @@
             will-change: width, opacity;
             transform: translateZ(0);
             backface-visibility: hidden;
-            transition: width 0.4s ease-out, opacity 0.4s ease-out;
+            transition: width 0.4s cubic-bezier(0.25, 1, 0.5, 1), opacity 0.4s ease-out;
         }
         .card-content {
             transition: opacity 0.3s ease-in-out;
+        }
+        #scroll-container {
+            scroll-snap-type: x mandatory;
+            -webkit-overflow-scrolling: touch;
+        }
+        .carousel-card {
+            scroll-snap-align: center;
         }
     </style>
 </head>
 <body class="bg-[#fbfbfd] text-[#1d1d1f] antialiased selection:bg-[#0071e3] selection:text-white flex flex-col min-h-screen justify-between">
 
-    <!-- Header / Navbar (Apple Glassmorphism) -->
+    <!-- Header / Navbar (Apple Glassmorphism - Enlarged for Logo) -->
     <header class="sticky top-0 z-50 bg-[#fbfbfd]/80 backdrop-blur-md border-b border-[#d2d2d7]/40 w-full">
-        <div class="max-w-5xl mx-auto px-6 h-12 flex items-center justify-between text-xs font-medium text-[#1d1d1f]">
-            <div class="flex items-center gap-2">
-                <img src="unnamed.png" alt="Interval Timer Logo" class="w-6 h-6 object-contain" onerror="this.src='https://images.unsplash.com/photo-1518611012118-696072aa579a?w=100&auto=format&fit=crop&q=60'">
-                <span class="font-semibold text-sm tracking-tight text-[#1d1d1f]">Interval Timer</span>
+        <div class="max-w-5xl mx-auto px-6 h-20 flex items-center justify-between text-sm font-medium text-[#1d1d1f]">
+            <div class="flex items-center gap-3">
+                <img src="unnamed.png" alt="Interval Timer Logo" class="w-10 h-10 object-contain" onerror="this.src='https://images.unsplash.com/photo-1518611012118-696072aa579a?w=100&auto=format&fit=crop&q=60'">
+                <span class="font-bold text-lg tracking-tight text-[#1d1d1f]">Interval Timer</span>
             </div>
             <nav class="hidden md:flex items-center gap-8 text-[#515154]">
                 <a href="#features" class="hover:text-[#1d1d1f] transition">Overview</a>
                 <a href="#workouts" class="hover:text-[#1d1d1f] transition">Workouts</a>
             </nav>
-            <a href="https://play.google.com/store/apps/details?id=com.aistudio.beeptesttrainer.v2" target="_blank" rel="noopener noreferrer" class="bg-[#0071e3] hover:bg-[#0077ed] text-white font-normal px-3 py-1 rounded-full text-xs transition shadow-sm">
+            <a href="https://play.google.com/store/apps/details?id=com.aistudio.beeptesttrainer.v2" target="_blank" rel="noopener noreferrer" class="bg-[#0071e3] hover:bg-[#0077ed] text-white font-medium px-4 py-2 rounded-full text-xs transition shadow-sm">
                 Get App
             </a>
         </div>
@@ -75,18 +82,13 @@
 
     <!-- Why Choose Section (Horizontal Carousel) -->
     <section id="features" class="py-16 bg-white border-y border-[#d2d2d7]/30">
-        <div class="max-w-6xl mx-auto px-6 mb-8 flex items-center justify-between">
-            <div>
-                <span class="text-xs font-semibold uppercase tracking-wider text-[#0071e3]">Overview</span>
-                <h2 class="text-2xl md:text-3xl font-semibold text-[#1d1d1f] tracking-tight">Designed for performance.</h2>
-            </div>
-            <div class="flex items-center gap-3">
-                <span id="active-indicator" class="text-xs font-medium text-[#515154] bg-[#fbfbfd] px-3 py-1.5 rounded-full border border-[#d2d2d7]/60">Card 1 of 6</span>
-            </div>
+        <div class="max-w-6xl mx-auto px-6 mb-10 text-center">
+            <h2 class="text-3xl md:text-5xl font-semibold text-[#1d1d1f] tracking-tight">Designed for performance.</h2>
+            <p class="text-slate-500 text-sm md:text-base mt-2">Everything required to run your training sessions seamlessly, completely unlocked.</p>
         </div>
 
         <!-- Main Horizontal Carousel Container -->
-        <main class="w-full flex items-center overflow-x-auto no-scrollbar px-6 md:px-12 py-4 relative snap-x snap-mandatory scroll-smooth" id="scroll-container">
+        <main class="w-full flex items-center overflow-x-auto no-scrollbar px-6 md:px-12 py-4 relative scroll-smooth" id="scroll-container">
             <div class="flex items-center gap-5 mx-auto h-[420px] md:h-[460px]" id="cards-wrapper">
                 
                 <!-- Card 1 -->
@@ -274,7 +276,6 @@
     <script>
         const cards = document.querySelectorAll('.carousel-card');
         const container = document.getElementById('scroll-container');
-        const activeIndicator = document.getElementById('active-indicator');
         const navDots = document.querySelectorAll('.nav-dot');
 
         let isAutoScrolling = false;
@@ -318,8 +319,6 @@
                     dot.className = "nav-dot w-2.5 h-2.5 rounded-full bg-slate-300 hover:bg-slate-400 transition-all shadow-sm shrink-0";
                 }
             });
-
-            activeIndicator.textContent = `Card ${activeIndex + 1} of ${cards.length}`;
         }
 
         function scrollToCard(index, smooth = true) {
@@ -378,8 +377,5 @@
         // Initial setup
         updateCardLayout(0);
     </script>
-</body>
-</html>
-
 </body>
 </html>
