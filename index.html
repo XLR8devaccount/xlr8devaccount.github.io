@@ -1,5 +1,152 @@
 <!DOCTYPE html>
-<html>
-<head><title>Interval Timer Ads</title></head>
-<body><p>App developer site.</p></body>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interval Timer - Simple & Reliable Workout Timer</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-white text-slate-800 antialiased selection:bg-purple-600 selection:text-white">
+
+    <!-- Header / Navbar -->
+    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-100">
+        <div class="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
+            <div class="flex items-center gap-2.5">
+                <img src="unnamed.png" alt="Interval Timer Logo" class="w-8 h-8 object-contain" onerror="this.src='https://images.unsplash.com/photo-1518611012118-696072aa579a?w=100&auto=format&fit=crop&q=60'">
+                <span class="font-bold text-lg tracking-tight text-slate-900">Interval Timer</span>
+            </div>
+            <nav class="hidden md:flex items-center gap-6 text-sm font-medium text-slate-600">
+                <a href="#features" class="hover:text-slate-900 transition">Features</a>
+                <a href="#workouts" class="hover:text-slate-900 transition">Workouts</a>
+            </nav>
+            <a href="https://play.google.com/store/apps/details?id=com.aistudio.beeptesttrainer.v2" target="_blank" rel="noopener noreferrer" class="bg-slate-900 hover:bg-slate-800 text-white font-medium px-4 py-2 rounded-lg text-sm transition">
+                Get App
+            </a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="py-16 md:py-24 text-center px-6">
+        <div class="max-w-3xl mx-auto">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-100 text-slate-700 text-xs font-semibold mb-6">
+                100% Free Core Features • No Paywalls
+            </div>
+            <h1 class="text-3xl sm:text-5xl font-bold tracking-tight text-slate-900 mb-6 leading-tight">
+                An interval timer built for your training, on your terms.
+            </h1>
+            <p class="text-base sm:text-lg text-slate-600 mb-10 leading-relaxed">
+                Whether you're tracking daily progress, running sprints, or pushing through a new personal best, this app gives you everything you need without subscriptions or limits.
+            </p>
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-3">
+                <a href="https://play.google.com/store/apps/details?id=com.aistudio.beeptesttrainer.v2" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto bg-slate-900 hover:bg-slate-800 text-white font-medium px-6 py-3.5 rounded-xl text-sm transition flex items-center justify-center gap-2">
+                    <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M3.609 1.814L13.792 12 3.61 22.186a1.53 1.53 0 0 1-.22-.84V2.654c0-.315.08-.61.22-.84zM15.208 13.416l2.193 2.193-11.83 6.836 9.637-9.029zm0-2.832L5.571 1.555l11.83 6.836-2.193 2.193zm1.414 1.414L21.05 14.3a1.5 1.5 0 0 1 0 2.4l-3.05 1.76-2.378-2.378 1.392-1.392z"/></svg>
+                    Download on Google Play
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Section -->
+    <section id="features" class="py-16 bg-slate-50 border-y border-slate-100 px-6">
+        <div class="max-w-5xl mx-auto">
+            <div class="text-center max-w-xl mx-auto mb-12">
+                <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mb-3">Core Features</h2>
+                <p class="text-slate-600 text-sm">Everything required to run your sessions smoothly, completely unlocked.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Feature 1 -->
+                <div class="bg-white border border-slate-200/80 rounded-2xl p-6 shadow-sm">
+                    <h3 class="font-semibold text-slate-900 mb-2">100% Free Core Tools</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">Enjoy every essential workout setting and routine builder with zero limits or unexpected paywalls.</p>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="bg-white border border-slate-200/80 rounded-2xl p-6 shadow-sm">
+                    <h3 class="font-semibold text-slate-900 mb-2">Flexible Routine Builder</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">Quickly set up standalone timers or chain complex multi-workout circuits tailored to your specific training style.</p>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="bg-white border border-slate-200/80 rounded-2xl p-6 shadow-sm">
+                    <h3 class="font-semibold text-slate-900 mb-2">Clear Audio & Visual Cues</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">Stay focused on your form with intuitive cues that guide you seamlessly through work and rest phases.</p>
+                </div>
+
+                <!-- Feature 4 -->
+                <div class="bg-white border border-slate-200/80 rounded-2xl p-6 shadow-sm">
+                    <h3 class="font-semibold text-slate-900 mb-2">Detailed Progress Logs</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">Keep a straightforward history of past sessions in the logs tab to check consistency over time.</p>
+                </div>
+
+                <!-- Feature 5 -->
+                <div class="bg-white border border-slate-200/80 rounded-2xl p-6 shadow-sm">
+                    <h3 class="font-semibold text-slate-900 mb-2">Deep Customization</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">Fine-tune intervals, countdowns, and alerts to adapt the timer precisely to your workflow.</p>
+                </div>
+
+                <!-- Feature 6 -->
+                <div class="bg-white border border-slate-200/80 rounded-2xl p-6 shadow-sm">
+                    <h3 class="font-semibold text-slate-900 mb-2">Optional Support</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">Like the app? Optionally upgrade to unlock extra color themes and support future development.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Workout Styles Section -->
+    <section id="workouts" class="py-16 px-6">
+        <div class="max-w-5xl mx-auto">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mb-4">Built For Any Routine</h2>
+                    <p class="text-slate-600 text-sm mb-6 leading-relaxed">
+                        Whether you need a straightforward countdown clock or a multi-stage circuit routine, the app adjusts to fit your needs.
+                    </p>
+                    <ul class="space-y-3 text-sm text-slate-700">
+                        <li class="flex items-center gap-2.5">
+                            <span class="w-1.5 h-1.5 rounded-full bg-slate-900"></span> HIIT & Interval Training
+                        </li>
+                        <li class="flex items-center gap-2.5">
+                            <span class="w-1.5 h-1.5 rounded-full bg-slate-900"></span> Tabata & Circuits
+                        </li>
+                        <li class="flex items-center gap-2.5">
+                            <span class="w-1.5 h-1.5 rounded-full bg-slate-900"></span> Home Workouts & Calisthenics
+                        </li>
+                        <li class="flex items-center gap-2.5">
+                            <span class="w-1.5 h-1.5 rounded-full bg-slate-900"></span> Running & Sprint Intervals
+                        </li>
+                        <li class="flex items-center gap-2.5">
+                            <span class="w-1.5 h-1.5 rounded-full bg-slate-900"></span> Boxing & MMA Rounds
+                        </li>
+                        <li class="flex items-center gap-2.5">
+                            <span class="w-1.5 h-1.5 rounded-full bg-slate-900"></span> Yoga & Stretching
+                        </li>
+                    </ul>
+                </div>
+                <div class="bg-slate-50 border border-slate-200 rounded-2xl p-8 text-center">
+                    <img src="unnamed.png" alt="App Icon" class="w-20 h-20 mx-auto object-contain mb-4">
+                    <h3 class="font-bold text-slate-900 mb-1">Start training today</h3>
+                    <p class="text-slate-600 text-xs mb-6">Available now on Google Play.</p>
+                    <a href="https://play.google.com/store/apps/details?id=com.aistudio.beeptesttrainer.v2" target="_blank" rel="noopener noreferrer" class="inline-block bg-slate-900 hover:bg-slate-800 text-white font-medium px-5 py-2.5 rounded-xl text-xs transition">
+                        Get It On Google Play
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 border-t border-slate-100 text-center text-slate-500 text-xs">
+        <p>&copy; 2026 Interval Timer. All rights reserved.</p>
+    </footer>
+
+</body>
 </html>
