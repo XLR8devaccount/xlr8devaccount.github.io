@@ -38,7 +38,7 @@
         }
     </style>
 </head>
-<body class="bg-[#fbfbfd] text-[#1d1d1f] antialiased selection:bg-[#0071e3] selection:text-white flex flex-col min-h-screen justify-between">
+<body class="bg-[#fbfbfd] text-[#1d1d1f] antialiased selection:bg-[#0071e3] selection:text-white flex flex-col min-h-screen justify-between pb-16 md:pb-0">
 
     <!-- Header / Navbar (Apple Glassmorphism - Enlarged for Logo) -->
     <header class="sticky top-0 z-50 bg-[#fbfbfd]/80 backdrop-blur-md border-b border-[#d2d2d7]/40 w-full">
@@ -58,7 +58,7 @@
     </header>
 
     <!-- Hero Section -->
-    <section class="py-20 md:py-28 text-center px-6">
+    <section class="pt-12 pb-20 md:pt-16 md:pb-28 text-center px-6">
         <div class="max-w-3xl mx-auto">
             <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-slate-200/60 text-[#1d1d1f] text-xs font-medium mb-6 backdrop-blur">
                 <span>100% Free Core Features</span>
@@ -72,9 +72,18 @@
                 Whether you're pushing through a new personal best or tracking daily routines, experience a distraction-free timer built completely around your focus.
             </p>
             <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-                <a href="https://play.google.com/store/apps/details?id=com.aistudio.beeptesttrainer.v2" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto bg-[#0071e3] hover:bg-[#0077ed] text-white font-medium px-6 py-3 rounded-full text-sm transition shadow-md shadow-blue-500/15 flex items-center justify-center gap-2">
-                    <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M3.609 1.814L13.792 12 3.61 22.186a1.53 1.53 0 0 1-.22-.84V2.654c0-.315.08-.61.22-.84zM15.208 13.416l2.193 2.193-11.83 6.836 9.637-9.029zm0-2.832L5.571 1.555l11.83 6.836-2.193 2.193zm1.414 1.414L21.05 14.3a1.5 1.5 0 0 1 0 2.4l-3.05 1.76-2.378-2.378 1.392-1.392z"/></svg>
-                    Download on Google Play
+                <!-- Google Play Badge Button -->
+                <a href="https://play.google.com/store/apps/details?id=com.aistudio.beeptesttrainer.v2" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-3 bg-black hover:bg-slate-900 text-white px-6 py-3 rounded-xl transition shadow-lg shadow-black/10">
+                    <svg class="w-6 h-6" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                        <path fill="#ea4335" d="M30.73 24.63C25.43 30.13 22 39.83 22 53.03v405.94c0 13.2 3.43 22.9 8.73 28.4l2.25 2.15L248.86 269.9v-27.8L32.98 22.48z"/>
+                        <path fill="#fbbc04" d="M315.15 336.17l-66.29-66.27V242.1l66.29-66.28 3.51 2.01 78.47 44.66c22.4 12.75 22.4 33.69 0 46.44l-78.47 44.67z"/>
+                        <path fill="#4285f4" d="M318.66 334.16L248.86 264.36 32.98 489.52c7.5 7.93 19.5 8.92 33.15 1.15l252.53-143.66-30-12.85z"/>
+                        <path fill="#34a853" d="M318.66 177.84L66.13 34.18c-13.65-7.77-25.65-6.78-33.15 1.15l215.88 225.18 69.8-69.8z"/>
+                    </svg>
+                    <div class="text-left">
+                        <div class="text-[10px] uppercase tracking-wider text-slate-400 font-medium leading-none">Get it on</div>
+                        <div class="text-sm font-semibold leading-tight mt-0.5">Google Play</div>
+                    </div>
                 </a>
             </div>
         </div>
@@ -259,13 +268,33 @@
                     <img src="unnamed.png" alt="App Icon" class="w-20 h-20 mx-auto object-contain mb-6">
                     <h3 class="font-semibold text-xl text-[#1d1d1f] mb-2">Start training today</h3>
                     <p class="text-[#515154] text-xs mb-8">Available now on Google Play.</p>
-                    <a href="https://play.google.com/store/apps/details?id=com.aistudio.beeptesttrainer.v2" target="_blank" rel="noopener noreferrer" class="inline-block bg-[#0071e3] hover:bg-[#0077ed] text-white font-medium px-6 py-3 rounded-full text-xs transition shadow-sm">
+                    <a href="https://play.google.com/store/apps/details?id=com.aistudio.beeptesttrainer.v2" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-black hover:bg-slate-900 text-white font-medium px-5 py-2.5 rounded-xl text-xs transition shadow-md">
+                        <svg class="w-4 h-4" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                            <path fill="#ea4335" d="M30.73 24.63C25.43 30.13 22 39.83 22 53.03v405.94c0 13.2 3.43 22.9 8.73 28.4l2.25 2.15L248.86 269.9v-27.8L32.98 22.48z"/>
+                            <path fill="#fbbc04" d="M315.15 336.17l-66.29-66.27V242.1l66.29-66.28 3.51 2.01 78.47 44.66c22.4 12.75 22.4 33.69 0 46.44l-78.47 44.67z"/>
+                            <path fill="#4285f4" d="M318.66 334.16L248.86 264.36 32.98 489.52c7.5 7.93 19.5 8.92 33.15 1.15l252.53-143.66-30-12.85z"/>
+                            <path fill="#34a853" d="M318.66 177.84L66.13 34.18c-13.65-7.77-25.65-6.78-33.15 1.15l215.88 225.18 69.8-69.8z"/>
+                        </svg>
                         Get It On Google Play
                     </a>
                 </div>
             </div>
         </div>
     </section>
+
+    <!-- Sticky Mobile Download Bar -->
+    <div class="fixed bottom-0 left-0 right-0 z-40 bg-white/90 backdrop-blur-md border-t border-slate-200/80 p-3 md:hidden flex items-center justify-between shadow-[0_-4px_20px_rgba(0,0,0,0.08)]">
+        <div class="flex items-center gap-2.5">
+            <img src="unnamed.png" alt="Icon" class="w-9 h-9 object-contain" onerror="this.src='https://images.unsplash.com/photo-1518611012118-696072aa579a?w=100&auto=format&fit=crop&q=60'">
+            <div>
+                <div class="font-bold text-xs text-[#1d1d1f]">Interval Timer</div>
+                <div class="text-[10px] text-slate-500">Free • No Ads/Paywalls</div>
+            </div>
+        </div>
+        <a href="https://play.google.com/store/apps/details?id=com.aistudio.beeptesttrainer.v2" target="_blank" rel="noopener noreferrer" class="bg-[#0071e3] text-white font-medium px-4 py-2 rounded-full text-xs shadow-sm">
+            Get App
+        </a>
+    </div>
 
     <!-- Footer -->
     <footer class="py-8 border-t border-[#d2d2d7]/40 text-center text-[#515154] text-xs bg-white w-full">
